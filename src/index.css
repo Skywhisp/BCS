@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Tilda Sans VF";
+  src: url(/src/assets/TildaSans-VF.ttf) format("ttf"),
+    url(/src/assets/TildaSans-VF.woff) format("woff"),
+    url(/src/assets/TildaSans-VF.woff2) format("woff2");
+}
+
+html {
+  font-family: "Tilda Sans VF";
+}
+
+.grid-area-content {
+  grid-area: content;
+}
+
+.grid-area-image {
+  grid-area: image;
+}
+
+.grid-area-card1 {
+  grid-area: card1;
+}
+
+.grid-area-card2 {
+  grid-area: card2;
+}
+
+.grid-area-card3 {
+  grid-area: card3;
+}
+
+.grid-area-card4 {
+  grid-area: card4;
+}
+
+.grid-area-card5 {
+  grid-area: card5;
+}
+
+.grid-area-card6 {
+  grid-area: card6;
+}
+
+.grid-areas-hero {
+  display: grid;
+  grid-template-areas:
+    "content image"
+    "card1 card2";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.grid-areas-services {
+  grid-template-areas:
+    "card1 card2 card3"
+    "card4 card5 card6";
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.grid-areas-contacts {
+  display: grid;
+  grid-template-areas: "card1 card2";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.custom-shadow {
+  box-shadow: 0 0 20px rgba(72, 155, 231, 0.5);
+}
